@@ -15,6 +15,10 @@
 		849619941D0B6EDD007A0474 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849619921D0B6EDD007A0474 /* LaunchScreen.storyboard */; };
 		8496199F1D0B6EDD007A0474 /* TestSingleViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496199E1D0B6EDD007A0474 /* TestSingleViewTests.m */; };
 		849619AA1D0B6EDD007A0474 /* TestSingleViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 849619A91D0B6EDD007A0474 /* TestSingleViewUITests.m */; };
+		849619B81D0B71DD007A0474 /* Framework in Resources */ = {isa = PBXBuildFile; fileRef = 849619B71D0B71DD007A0474 /* Framework */; };
+		849619BA1D0B7280007A0474 /* Common in Resources */ = {isa = PBXBuildFile; fileRef = 849619B91D0B7280007A0474 /* Common */; };
+		849619C81D0B8134007A0474 /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849619C71D0B8134007A0474 /* CommonViewController.m */; };
+		849619CC1D0B83DF007A0474 /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 849619CB1D0B83DF007A0474 /* Globals.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,16 +55,15 @@
 		849619A51D0B6EDD007A0474 /* TestSingleViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestSingleViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		849619A91D0B6EDD007A0474 /* TestSingleViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSingleViewUITests.m; sourceTree = "<group>"; };
 		849619AB1D0B6EDD007A0474 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		849619B71D0B71DD007A0474 /* Framework */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Framework; sourceTree = "<group>"; };
+		849619B91D0B7280007A0474 /* Common */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Common; sourceTree = "<group>"; };
+		849619C61D0B8134007A0474 /* CommonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonViewController.h; path = Common/CommonViewController.h; sourceTree = "<group>"; };
+		849619C71D0B8134007A0474 /* CommonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonViewController.m; path = Common/CommonViewController.m; sourceTree = "<group>"; };
+		849619CA1D0B83DF007A0474 /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Globals.h; path = Common/Globals.h; sourceTree = "<group>"; };
+		849619CB1D0B83DF007A0474 /* Globals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Globals.m; path = Common/Globals.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8496197E1D0B6EDD007A0474 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		849619971D0B6EDD007A0474 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -69,6 +72,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		849619A21D0B6EDD007A0474 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		849619BC1D0B7F70007A0474 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -101,6 +111,9 @@
 		849619831D0B6EDD007A0474 /* TestSingleView */ = {
 			isa = PBXGroup;
 			children = (
+				849619C91D0B833F007A0474 /* Common */,
+				849619B91D0B7280007A0474 /* Common */,
+				849619B71D0B71DD007A0474 /* Framework */,
 				849619871D0B6EDD007A0474 /* AppDelegate.h */,
 				849619881D0B6EDD007A0474 /* AppDelegate.m */,
 				8496198A1D0B6EDD007A0474 /* ViewController.h */,
@@ -140,6 +153,17 @@
 			path = TestSingleViewUITests;
 			sourceTree = "<group>";
 		};
+		849619C91D0B833F007A0474 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				849619CA1D0B83DF007A0474 /* Globals.h */,
+				849619CB1D0B83DF007A0474 /* Globals.m */,
+				849619C61D0B8134007A0474 /* CommonViewController.h */,
+				849619C71D0B8134007A0474 /* CommonViewController.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,8 +172,8 @@
 			buildConfigurationList = 849619AE1D0B6EDD007A0474 /* Build configuration list for PBXNativeTarget "TestSingleView" */;
 			buildPhases = (
 				8496197D1D0B6EDD007A0474 /* Sources */,
-				8496197E1D0B6EDD007A0474 /* Frameworks */,
 				8496197F1D0B6EDD007A0474 /* Resources */,
+				849619BC1D0B7F70007A0474 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,9 +267,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849619BA1D0B7280007A0474 /* Common in Resources */,
 				849619941D0B6EDD007A0474 /* LaunchScreen.storyboard in Resources */,
 				849619911D0B6EDD007A0474 /* Assets.xcassets in Resources */,
 				8496198F1D0B6EDD007A0474 /* Main.storyboard in Resources */,
+				849619B81D0B71DD007A0474 /* Framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +297,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8496198C1D0B6EDD007A0474 /* ViewController.m in Sources */,
+				849619C81D0B8134007A0474 /* CommonViewController.m in Sources */,
 				849619891D0B6EDD007A0474 /* AppDelegate.m in Sources */,
+				849619CC1D0B83DF007A0474 /* Globals.m in Sources */,
 				849619861D0B6EDD007A0474 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,10 +443,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TestSingleView/Common",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TestSingleView/Common",
+				);
 				INFOPLIST_FILE = TestSingleView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vn.com.basc.TestSingleView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(PROJECT_DIR)/TestSingleView/Common";
 			};
 			name = Debug;
 		};
@@ -426,10 +463,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TestSingleView/Common",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TestSingleView/Common",
+				);
 				INFOPLIST_FILE = TestSingleView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vn.com.basc.TestSingleView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(PROJECT_DIR)/TestSingleView/Common";
 			};
 			name = Release;
 		};

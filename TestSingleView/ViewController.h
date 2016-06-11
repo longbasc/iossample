@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CommonViewController.h>
 
-@interface ViewController : UIViewController
+
+@interface ViewController : CommonViewController
 
 
 @end
