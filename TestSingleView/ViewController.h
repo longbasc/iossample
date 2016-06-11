@@ -12,6 +12,9 @@
 
 @interface ViewController : CommonViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *BtLogin;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *Cst_Bt2Bt1;
 
 @end
 

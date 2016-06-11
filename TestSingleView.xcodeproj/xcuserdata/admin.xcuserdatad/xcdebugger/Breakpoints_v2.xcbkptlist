@@ -9,29 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TestSingleView/ViewController.m"
-            timestampString = "487297471.655575"
+            filePath = "TestSingleView/Common/CommonViewController.m"
+            timestampString = "487312867.839488"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "-touchUpBtLogin:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestSingleView/Common/Globals.m"
-            timestampString = "487297590.748214"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "-doHTTPPostWithURL:postString:markData:onDone:onError:"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "-doHTPPostFailWithMarkData:Error:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

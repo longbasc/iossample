@@ -28,13 +28,15 @@
 
 - (IBAction)touchUpBtLogin:(id)sender {
     
+    self.Cst_Bt2Bt1.constant = 0;
     
+    [self.BtLogin setTitle:@"Sign In" forState:UIControlStateNormal];
     //get product list
-    NSString *api_url =  @"gateway.php?controller=test.testfunc";
-    NSString *postString = [NSString stringWithFormat:@"Param1=%d&Param2=%@",1,@"aaa"];
+    NSString *api_url =  @"test_post.php";
+    NSString *postString = [NSString stringWithFormat:@"Username=%@&Password=%@"  ,@"longnguyen",@"password"];
     
     [self showWaitingIcon];
-    Globals* globals = [[Globals alloc] init];
+    Globals* globals = [[Globals sharedInstance]init];//[[Globals alloc] init];
     globals.delegate = self;
     [globals doHTTPPostWithURL:api_url  postString:postString markData:@"TEST_FUNC" onDone:nil onError:nil];
     
@@ -55,9 +57,36 @@
                                                                    options:0
                                                                      error:NULL];
         
+        int status = [[ResultData objectForKey:@"status"] intValue];
+        
+        if(status == 200){
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Question"
+                                                            message:@"I'm ok"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:@"Say Hello",nil];
+            alert.tag = 100;
+            [alert show];
+            
+            
+        }
+    
+        
+        
         
     }
 }
 
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    
+    if(alertView.tag != 100) return;
+    
+    if (buttonIndex == 0) {
+        NSLog(@"OK Tapped.");
+    }
+    else if (buttonIndex == 1) {
+        NSLog(@"Hello Tapped. Hello World!");
+    }
+}
 
 @end

@@ -10,7 +10,7 @@
 
 @implementation Globals
 
-NSString* const  G_CONST_SERVER_URL = @"www.basc.com.vn";
+NSString* const  G_CONST_SERVER_URL = @"www.basc.com.vn/bkticket";
 bool G_SignedIn = false;
 //=========================================================================================================================
 + (Globals*)sharedInstance
@@ -83,7 +83,7 @@ bool G_SignedIn = false;
 
 //=========================================================================================================================
 - (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
-    NSArray * trustedHosts = @[G_CONST_SERVER_URL];
+    NSArray * trustedHosts = @[@"www.basc.com.vn"];
     if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust])
         if ([trustedHosts containsObject:challenge.protectionSpace.host])
             [challenge.sender useCredential:[NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust] forAuthenticationChallenge:challenge];
