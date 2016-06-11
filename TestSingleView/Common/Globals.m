@@ -56,7 +56,8 @@ bool G_SignedIn = false;
 }
 
 //=========================================================================================================================
-- (void)doHTTPPostWithURL:(NSString*)url postParams:(NSString*)postParams markData:(id)markData  onDone:(void(^)(id))onDone onError:(void(^)(id))onError
+- (void)doHTTPPostWithURL:(NSString*)url postString:(NSString*)postString  markData:(id)markData onDone:(void(^)(id))onDone onError:(void(^)(id))onError
+
 {
     onDoHTTPPostURLDone = [onDone copy];
     onDoHTTPPostURLError = [onError copy];
@@ -69,7 +70,7 @@ bool G_SignedIn = false;
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:60.0];
     [request setHTTPMethod:@"POST"];
-    [request setHTTPBody:[postParams dataUsingEncoding:NSUTF8StringEncoding]];
+    [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
     
     NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
