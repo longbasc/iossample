@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Globals.h"
+#import "ContainerViewController.h"
 
 @interface ViewController ()
 
@@ -59,15 +60,24 @@
         
         int status = [[ResultData objectForKey:@"status"] intValue];
         
-        if(status == 200){
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Question"
-                                                            message:@"I'm ok"
+        if(status != 200){
+            
+            
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning"
+                                                            message:@"Could not connect internet or wrong username and password"
                                                            delegate:self
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:@"Say Hello",nil];
             alert.tag = 100;
             [alert show];
             
+            
+        }else{
+            
+            //GL_MV_Customer.hadStripeID = true;
+            UIStoryboard * storyboard = self.storyboard;
+            ContainerViewController * nextpage = [storyboard instantiateViewControllerWithIdentifier: @ "ContainerViewController"];
+            [self.navigationController pushViewController: nextpage animated: YES];
             
         }
     

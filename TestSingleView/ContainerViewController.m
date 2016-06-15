@@ -37,15 +37,19 @@
     // Pass the selected object to the new view controller.
 }
 */
+//=======================================================
 - (IBAction)touchUpBtHeader:(id)sender {
     [self addChildViewWithNibName:@"ChildView1"];
    
     
 }
 
+//=======================================================
+- (IBAction)touchUpBtSignout:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
-
-
+//=======================================================
 - (IBAction)touchUpBtFooter:(id)sender {
     
     [self addChildViewWithNibName:@"ChildView2"];

@@ -18,6 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
       _spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
