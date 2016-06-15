@@ -19,12 +19,14 @@
 		849619BA1D0B7280007A0474 /* Common in Resources */ = {isa = PBXBuildFile; fileRef = 849619B91D0B7280007A0474 /* Common */; };
 		849619C81D0B8134007A0474 /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849619C71D0B8134007A0474 /* CommonViewController.m */; };
 		849619CC1D0B83DF007A0474 /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 849619CB1D0B83DF007A0474 /* Globals.m */; };
+		84C9486C1D1103EF006E5048 /* CommonChildView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9486B1D1103EF006E5048 /* CommonChildView.m */; };
+		84C948721D110799006E5048 /* ChildView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C948701D110799006E5048 /* ChildView1.m */; };
+		84C948731D110799006E5048 /* ChildView1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C948711D110799006E5048 /* ChildView1.xib */; };
+		84C948771D1107AC006E5048 /* ChildView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C948751D1107AC006E5048 /* ChildView2.m */; };
+		84C948781D1107AC006E5048 /* ChildView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C948761D1107AC006E5048 /* ChildView2.xib */; };
+		84C9487C1D110E42006E5048 /* LeftMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C9487B1D110E42006E5048 /* LeftMenuView.xib */; };
+		84C9487F1D110EF6006E5048 /* LeftMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9487E1D110EF6006E5048 /* LeftMenuView.m */; };
 		84F3C9B71D0FF62D00D576CE /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F3C9B61D0FF62D00D576CE /* ContainerViewController.m */; };
-		84F3C9BA1D0FF89500D576CE /* ChildView1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F3C9B91D0FF89500D576CE /* ChildView1.xib */; };
-		84F3C9BD1D0FF93900D576CE /* CommonChildView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F3C9BC1D0FF93900D576CE /* CommonChildView.m */; };
-		84F3C9C01D0FF96600D576CE /* ChildView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F3C9BF1D0FF96600D576CE /* ChildView1.m */; };
-		84F3C9C21D0FFF2A00D576CE /* ChildView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F3C9C11D0FFF2A00D576CE /* ChildView2.xib */; };
-		84F3C9C51D0FFF8500D576CE /* ChildView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F3C9C41D0FFF8500D576CE /* ChildView2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,16 +69,19 @@
 		849619C71D0B8134007A0474 /* CommonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonViewController.m; path = Common/CommonViewController.m; sourceTree = "<group>"; };
 		849619CA1D0B83DF007A0474 /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Globals.h; path = Common/Globals.h; sourceTree = "<group>"; };
 		849619CB1D0B83DF007A0474 /* Globals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Globals.m; path = Common/Globals.m; sourceTree = "<group>"; };
+		84C9486A1D1103EF006E5048 /* CommonChildView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonChildView.h; path = Common/CommonChildView.h; sourceTree = "<group>"; };
+		84C9486B1D1103EF006E5048 /* CommonChildView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonChildView.m; path = Common/CommonChildView.m; sourceTree = "<group>"; };
+		84C9486F1D110799006E5048 /* ChildView1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChildView1.h; path = ChildView/ChildView1/ChildView1.h; sourceTree = "<group>"; };
+		84C948701D110799006E5048 /* ChildView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChildView1.m; path = ChildView/ChildView1/ChildView1.m; sourceTree = "<group>"; };
+		84C948711D110799006E5048 /* ChildView1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChildView1.xib; path = ChildView/ChildView1/ChildView1.xib; sourceTree = "<group>"; };
+		84C948741D1107AC006E5048 /* ChildView2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChildView2.h; path = ChildView/ChildView2/ChildView2.h; sourceTree = "<group>"; };
+		84C948751D1107AC006E5048 /* ChildView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChildView2.m; path = ChildView/ChildView2/ChildView2.m; sourceTree = "<group>"; };
+		84C948761D1107AC006E5048 /* ChildView2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChildView2.xib; path = ChildView/ChildView2/ChildView2.xib; sourceTree = "<group>"; };
+		84C9487B1D110E42006E5048 /* LeftMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LeftMenuView.xib; path = ChildView/LeftMenu/LeftMenuView.xib; sourceTree = "<group>"; };
+		84C9487D1D110EF6006E5048 /* LeftMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftMenuView.h; path = ChildView/LeftMenu/LeftMenuView.h; sourceTree = "<group>"; };
+		84C9487E1D110EF6006E5048 /* LeftMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftMenuView.m; path = ChildView/LeftMenu/LeftMenuView.m; sourceTree = "<group>"; };
 		84F3C9B51D0FF62D00D576CE /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
 		84F3C9B61D0FF62D00D576CE /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
-		84F3C9B91D0FF89500D576CE /* ChildView1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChildView1.xib; path = ChildView/ChildView1.xib; sourceTree = "<group>"; };
-		84F3C9BB1D0FF93900D576CE /* CommonChildView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonChildView.h; path = ChildView/CommonChildView.h; sourceTree = "<group>"; };
-		84F3C9BC1D0FF93900D576CE /* CommonChildView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonChildView.m; path = ChildView/CommonChildView.m; sourceTree = "<group>"; };
-		84F3C9BE1D0FF96600D576CE /* ChildView1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChildView1.h; path = ChildView/ChildView1.h; sourceTree = "<group>"; };
-		84F3C9BF1D0FF96600D576CE /* ChildView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChildView1.m; path = ChildView/ChildView1.m; sourceTree = "<group>"; };
-		84F3C9C11D0FFF2A00D576CE /* ChildView2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChildView2.xib; path = ChildView/ChildView2.xib; sourceTree = "<group>"; };
-		84F3C9C31D0FFF8500D576CE /* ChildView2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChildView2.h; path = ChildView/ChildView2.h; sourceTree = "<group>"; };
-		84F3C9C41D0FFF8500D576CE /* ChildView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChildView2.m; path = ChildView/ChildView2.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +180,8 @@
 		849619C91D0B833F007A0474 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				84C9486A1D1103EF006E5048 /* CommonChildView.h */,
+				84C9486B1D1103EF006E5048 /* CommonChildView.m */,
 				849619CA1D0B83DF007A0474 /* Globals.h */,
 				849619CB1D0B83DF007A0474 /* Globals.m */,
 				849619C61D0B8134007A0474 /* CommonViewController.h */,
@@ -183,17 +190,42 @@
 			name = Common;
 			sourceTree = "<group>";
 		};
+		84C9486D1D110775006E5048 /* ChildView1 */ = {
+			isa = PBXGroup;
+			children = (
+				84C9486F1D110799006E5048 /* ChildView1.h */,
+				84C948701D110799006E5048 /* ChildView1.m */,
+				84C948711D110799006E5048 /* ChildView1.xib */,
+			);
+			name = ChildView1;
+			sourceTree = "<group>";
+		};
+		84C9486E1D11077F006E5048 /* ChildView2 */ = {
+			isa = PBXGroup;
+			children = (
+				84C948741D1107AC006E5048 /* ChildView2.h */,
+				84C948751D1107AC006E5048 /* ChildView2.m */,
+				84C948761D1107AC006E5048 /* ChildView2.xib */,
+			);
+			name = ChildView2;
+			sourceTree = "<group>";
+		};
+		84C9487A1D110E11006E5048 /* LeftMenu */ = {
+			isa = PBXGroup;
+			children = (
+				84C9487B1D110E42006E5048 /* LeftMenuView.xib */,
+				84C9487D1D110EF6006E5048 /* LeftMenuView.h */,
+				84C9487E1D110EF6006E5048 /* LeftMenuView.m */,
+			);
+			name = LeftMenu;
+			sourceTree = "<group>";
+		};
 		84F3C9B81D0FF7FD00D576CE /* ChildView */ = {
 			isa = PBXGroup;
 			children = (
-				84F3C9B91D0FF89500D576CE /* ChildView1.xib */,
-				84F3C9BB1D0FF93900D576CE /* CommonChildView.h */,
-				84F3C9BC1D0FF93900D576CE /* CommonChildView.m */,
-				84F3C9BE1D0FF96600D576CE /* ChildView1.h */,
-				84F3C9BF1D0FF96600D576CE /* ChildView1.m */,
-				84F3C9C11D0FFF2A00D576CE /* ChildView2.xib */,
-				84F3C9C31D0FFF8500D576CE /* ChildView2.h */,
-				84F3C9C41D0FFF8500D576CE /* ChildView2.m */,
+				84C9487A1D110E11006E5048 /* LeftMenu */,
+				84C9486E1D11077F006E5048 /* ChildView2 */,
+				84C9486D1D110775006E5048 /* ChildView1 */,
 			);
 			name = ChildView;
 			sourceTree = "<group>";
@@ -301,11 +333,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84F3C9C21D0FFF2A00D576CE /* ChildView2.xib in Resources */,
+				84C948781D1107AC006E5048 /* ChildView2.xib in Resources */,
 				849619BA1D0B7280007A0474 /* Common in Resources */,
 				849619941D0B6EDD007A0474 /* LaunchScreen.storyboard in Resources */,
 				849619911D0B6EDD007A0474 /* Assets.xcassets in Resources */,
-				84F3C9BA1D0FF89500D576CE /* ChildView1.xib in Resources */,
+				84C9487C1D110E42006E5048 /* LeftMenuView.xib in Resources */,
+				84C948731D110799006E5048 /* ChildView1.xib in Resources */,
 				8496198F1D0B6EDD007A0474 /* Main.storyboard in Resources */,
 				849619B81D0B71DD007A0474 /* Framework in Resources */,
 			);
@@ -332,15 +365,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84F3C9C51D0FFF8500D576CE /* ChildView2.m in Sources */,
-				84F3C9BD1D0FF93900D576CE /* CommonChildView.m in Sources */,
+				84C948771D1107AC006E5048 /* ChildView2.m in Sources */,
 				8496198C1D0B6EDD007A0474 /* ViewController.m in Sources */,
 				849619C81D0B8134007A0474 /* CommonViewController.m in Sources */,
 				84F3C9B71D0FF62D00D576CE /* ContainerViewController.m in Sources */,
+				84C9487F1D110EF6006E5048 /* LeftMenuView.m in Sources */,
 				849619891D0B6EDD007A0474 /* AppDelegate.m in Sources */,
 				849619CC1D0B83DF007A0474 /* Globals.m in Sources */,
 				849619861D0B6EDD007A0474 /* main.m in Sources */,
-				84F3C9C01D0FF96600D576CE /* ChildView1.m in Sources */,
+				84C9486C1D1103EF006E5048 /* CommonChildView.m in Sources */,
+				84C948721D110799006E5048 /* ChildView1.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
