@@ -154,12 +154,12 @@
     [av setDefaultValue];
     //av.userInteractionEnabled = true;
     
-    [av setFrame:CGRectMake( -self.view.frame.size.width , 20, self.view.frame.size.width  -100 , self.view.frame.size.height  )]; //notice this is OFF screen!
+    [av setFrame:CGRectMake( -self.view.frame.size.width , 20, self.view.frame.size.width  -100 , self.view.frame.size.height - 20 )]; //notice this is OFF screen!
     
     [UIView beginAnimations:@"animateChildView" context:nil];
     [UIView setAnimationDuration:0.4];
     
-    [av setFrame:CGRectMake( 0 , 20, self.view.frame.size.width - 100 , self.view.frame.size.height  )]; //notice this is OFF screen!
+    [av setFrame:CGRectMake( 0 , 20, self.view.frame.size.width - 100 , self.view.frame.size.height -20 )]; //notice this is OFF screen!
     //notice this is ON screen!
     
     
