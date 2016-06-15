@@ -76,7 +76,7 @@
     
     [av setFrame:CGRectMake( self.containerScrollView.frame.size.width , 0, self.containerScrollView.frame.size.width  , self.containerScrollView.frame.size.height  )]; //notice this is OFF screen!
     
-    [UIView beginAnimations:@"animateChildView" context:nil];
+    [UIView beginAnimations:@"animateAddChildView" context:nil];
     [UIView setAnimationDuration:0.4];
     
     [av setFrame:CGRectMake( 0 , 0, self.containerScrollView.frame.size.width  , self.containerScrollView.frame.size.height  )]; //notice this is OFF screen!
@@ -88,6 +88,7 @@
 }
 
 //==========================
+UIView* _animatedView = nil;
 -(bool) popChildViewToIndex: (int)index{
     
     //self.containerScrollView
@@ -99,15 +100,19 @@
             
             [av setFrame:CGRectMake( 0 , 0, self.containerScrollView.frame.size.width  , self.containerScrollView.frame.size.height  )]; //notice this is OFF screen!
             
-            [UIView beginAnimations:@"animateChildView" context:nil];
+            _animatedView = av;
+            [UIView beginAnimations:@"animatePopChildView" context:nil];
+            [UIView setAnimationDelegate: self]; //or some other object that has necessary method
+            [UIView setAnimationDidStopSelector: @selector(animationDidStop:finished:context:)];
             [UIView setAnimationDuration:0.4];
             
             [av setFrame:CGRectMake( self.containerScrollView.frame.size.width , 0, self.containerScrollView.frame.size.width  , self.containerScrollView.frame.size.height  )]; //notice this is OFF screen!
             //notice this is ON screen!
              [UIView commitAnimations];
             
-            [av removeFromSuperview];
-            [self.myContentViews removeObject:av];
+            
+            
+            
             return true;
         }
     }
@@ -129,12 +134,24 @@
 }
 
 //==========================
+-(void)animationDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context {
+    //do smth
+    if([animationID isEqualToString:@"animatePopChildView"]){
+        [_animatedView removeFromSuperview];
+        [self.myContentViews removeObject:_animatedView];
+        _animatedView = nil;
+    }
+}
+
+//==========================
 - (IBAction)touchUpBtBack:(id)sender {
     [self popChildViewToIndex:-1];
     
 }
 
 
+
+//==========================
 - (IBAction)touchUpBtLeftMenu:(id)sender {
     
     CommonChildView *av;
@@ -156,7 +173,7 @@
     
     [av setFrame:CGRectMake( -self.view.frame.size.width , 20, self.view.frame.size.width  -100 , self.view.frame.size.height - 20 )]; //notice this is OFF screen!
     
-    [UIView beginAnimations:@"animateChildView" context:nil];
+    [UIView beginAnimations:@"animateAddChildView" context:nil];
     [UIView setAnimationDuration:0.4];
     
     [av setFrame:CGRectMake( 0 , 20, self.view.frame.size.width - 100 , self.view.frame.size.height -20 )]; //notice this is OFF screen!
