@@ -17,10 +17,27 @@
 
 @implementation ContainerViewController
 
+CommonChildView*  _leftMenu = nil;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.myContentViews = [[NSMutableArray alloc] init];
+    
+    
+    [self.containerScrollView setUserInteractionEnabled:YES];
+    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
+    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
+    
+    
+    // Setting the swipe direction.
+    [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
+    
+    // Adding the swipe gesture on image view
+    [self.containerScrollView addGestureRecognizer:swipeLeft];
+    [self.containerScrollView addGestureRecognizer:swipeRight];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,6 +54,27 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+//==================================================================================================================
+- (void)handleSwipe:(UISwipeGestureRecognizer *)swipe {
+    
+    
+    if (swipe.direction == UISwipeGestureRecognizerDirectionLeft) {
+         //NSLog(@"Left Swipe");
+        if(_leftMenu!=nil){
+            [self hideLeftMenu];
+        }
+       
+    }
+    
+    if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
+        //NSLog(@"Right Swipe");
+         [self showLeftMenu];
+    }
+}
+
+
 //=======================================================
 - (IBAction)touchUpBtHeader:(id)sender {
     [self addChildViewWithNibName:@"ChildView1"];
@@ -144,6 +182,12 @@ UIView* _animatedView = nil;
         [_animatedView removeFromSuperview];
         [self.myContentViews removeObject:_animatedView];
         _animatedView = nil;
+    }else if([animationID isEqualToString:@"animateHideLeftMenu"]){
+        if(_leftMenu != nil){
+            [_leftMenu removeFromSuperview];
+            _leftMenu = nil;
+        }
+        
     }
 }
 
@@ -157,7 +201,25 @@ UIView* _animatedView = nil;
 
 //==========================
 - (IBAction)touchUpBtLeftMenu:(id)sender {
+    [self showLeftMenu];
     
+}
+
+
+//==========================
+-(void)selectMenuAtIndex:(NSIndexPath*)indexPath{
+    [self hideLeftMenu];
+}
+
+//==========================
+-(void)touchCloseLeftMenu{
+    [self hideLeftMenu];
+}
+
+
+
+//==========================
+- (void) showLeftMenu{
     CommonChildView *av;
     
     if (av == nil)
@@ -185,9 +247,31 @@ UIView* _animatedView = nil;
     
     
     [UIView commitAnimations];
+    _leftMenu = av;
+
+}
+
+//==========================
+- (void) hideLeftMenu{
+    
+    if(_leftMenu == nil) return;
+    
+    [_leftMenu setFrame:CGRectMake( 0 , 20, self.view.frame.size.width - 100 , self.view.frame.size.height -20 )]; //notice this is OFF screen!
+    
+    _animatedView = _leftMenu;
+    [UIView beginAnimations:@"animateHideLeftMenu" context:nil];
+    [UIView setAnimationDelegate: self]; //or some other object that has necessary method
+    [UIView setAnimationDidStopSelector: @selector(animationDidStop:finished:context:)];
+    [UIView setAnimationDuration:0.4];
+    
+   [_leftMenu setFrame:CGRectMake( -self.view.frame.size.width , 20, self.view.frame.size.width  -100 , self.view.frame.size.height - 20 )]; //notice this is OFF screen!
+    //notice this is ON screen!
+    [UIView commitAnimations];
 
     
 }
+
+
 
 
 

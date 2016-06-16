@@ -7,8 +7,9 @@
 //
 
 #import "CommonViewController.h"
+#import "LeftMenuView.h"
 
-@interface ContainerViewController : CommonViewController
+@interface ContainerViewController : CommonViewController <LeftMenuDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *containerScrollView;
 

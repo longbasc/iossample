@@ -20,8 +20,19 @@
 
 
 NSMutableArray* _leftMenuArr;
+
+//=====================================
 - (IBAction)touchUpBtCloseLeftMenu:(id)sender {
-    [self removeFromSuperview];
+    //[self removeFromSuperview];
+    //[self.delegate touchCloseLeftMenu];
+    
+    
+    if ([self.delegate respondsToSelector:@selector(touchCloseLeftMenu)]) {
+        [self.delegate touchCloseLeftMenu];
+       
+    }
+    
+    
 }
 
 
@@ -58,10 +69,12 @@ NSMutableArray* _leftMenuArr;
 
 //==============================================================================================================================
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    long idx = indexPath.row;
-    //int aaa = 0;
+    //long idx = indexPath.row;
     
-    [self removeFromSuperview];
+    if ([self.delegate respondsToSelector:@selector(selectMenuAtIndex:)]) {
+        [self.delegate selectMenuAtIndex:indexPath];
+        
+    }
     
 
     

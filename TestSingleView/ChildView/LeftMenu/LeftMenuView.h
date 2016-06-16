@@ -8,6 +8,16 @@
 
 #import "CommonChildView.h"
 
+
+@protocol LeftMenuDelegate
+
+// define protocol functions that can be used in any class using this delegate
+-(void)selectMenuAtIndex:(NSIndexPath*)indexPath;
+-(void)touchCloseLeftMenu;
+
+
+@end
+
 @interface LeftMenuView : CommonChildView <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *Tbl_LeftMenu;
 
