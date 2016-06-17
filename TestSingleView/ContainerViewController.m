@@ -271,7 +271,7 @@ UIView* _animatedView = nil;
     
 }
 
-
+// talk about CustomTableViewCell, multilanguge, override TextInput 
 
 
 

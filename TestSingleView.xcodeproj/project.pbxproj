@@ -26,6 +26,9 @@
 		84C948781D1107AC006E5048 /* ChildView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C948761D1107AC006E5048 /* ChildView2.xib */; };
 		84C9487C1D110E42006E5048 /* LeftMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C9487B1D110E42006E5048 /* LeftMenuView.xib */; };
 		84C9487F1D110EF6006E5048 /* LeftMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9487E1D110EF6006E5048 /* LeftMenuView.m */; };
+		84CC7D181D13A45200793347 /* LeftMenuCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CC7D171D13A45200793347 /* LeftMenuCellView.xib */; };
+		84CC7D1B1D13A55D00793347 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CC7D1A1D13A55D00793347 /* calendar.png */; };
+		84CC7D1E1D13A5C300793347 /* LeftMenuCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CC7D1D1D13A5C300793347 /* LeftMenuCellView.m */; };
 		84F3C9B71D0FF62D00D576CE /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F3C9B61D0FF62D00D576CE /* ContainerViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +83,10 @@
 		84C9487B1D110E42006E5048 /* LeftMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LeftMenuView.xib; path = ChildView/LeftMenu/LeftMenuView.xib; sourceTree = "<group>"; };
 		84C9487D1D110EF6006E5048 /* LeftMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftMenuView.h; path = ChildView/LeftMenu/LeftMenuView.h; sourceTree = "<group>"; };
 		84C9487E1D110EF6006E5048 /* LeftMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftMenuView.m; path = ChildView/LeftMenu/LeftMenuView.m; sourceTree = "<group>"; };
+		84CC7D171D13A45200793347 /* LeftMenuCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LeftMenuCellView.xib; path = ChildView/LeftMenu/LeftMenuCellView.xib; sourceTree = "<group>"; };
+		84CC7D1A1D13A55D00793347 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calendar.png; path = assets/calendar.png; sourceTree = "<group>"; };
+		84CC7D1C1D13A5C300793347 /* LeftMenuCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftMenuCellView.h; path = ChildView/LeftMenu/LeftMenuCellView.h; sourceTree = "<group>"; };
+		84CC7D1D1D13A5C300793347 /* LeftMenuCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftMenuCellView.m; path = ChildView/LeftMenu/LeftMenuCellView.m; sourceTree = "<group>"; };
 		84F3C9B51D0FF62D00D576CE /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
 		84F3C9B61D0FF62D00D576CE /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +139,7 @@
 		849619831D0B6EDD007A0474 /* TestSingleView */ = {
 			isa = PBXGroup;
 			children = (
+				84CC7D191D13A54B00793347 /* assets */,
 				84F3C9B81D0FF7FD00D576CE /* ChildView */,
 				849619C91D0B833F007A0474 /* Common */,
 				849619B91D0B7280007A0474 /* Common */,
@@ -216,8 +224,19 @@
 				84C9487B1D110E42006E5048 /* LeftMenuView.xib */,
 				84C9487D1D110EF6006E5048 /* LeftMenuView.h */,
 				84C9487E1D110EF6006E5048 /* LeftMenuView.m */,
+				84CC7D171D13A45200793347 /* LeftMenuCellView.xib */,
+				84CC7D1C1D13A5C300793347 /* LeftMenuCellView.h */,
+				84CC7D1D1D13A5C300793347 /* LeftMenuCellView.m */,
 			);
 			name = LeftMenu;
+			sourceTree = "<group>";
+		};
+		84CC7D191D13A54B00793347 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				84CC7D1A1D13A55D00793347 /* calendar.png */,
+			);
+			name = assets;
 			sourceTree = "<group>";
 		};
 		84F3C9B81D0FF7FD00D576CE /* ChildView */ = {
@@ -340,6 +359,8 @@
 				84C9487C1D110E42006E5048 /* LeftMenuView.xib in Resources */,
 				84C948731D110799006E5048 /* ChildView1.xib in Resources */,
 				8496198F1D0B6EDD007A0474 /* Main.storyboard in Resources */,
+				84CC7D1B1D13A55D00793347 /* calendar.png in Resources */,
+				84CC7D181D13A45200793347 /* LeftMenuCellView.xib in Resources */,
 				849619B81D0B71DD007A0474 /* Framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,6 +395,7 @@
 				849619CC1D0B83DF007A0474 /* Globals.m in Sources */,
 				849619861D0B6EDD007A0474 /* main.m in Sources */,
 				84C9486C1D1103EF006E5048 /* CommonChildView.m in Sources */,
+				84CC7D1E1D13A5C300793347 /* LeftMenuCellView.m in Sources */,
 				84C948721D110799006E5048 /* ChildView1.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

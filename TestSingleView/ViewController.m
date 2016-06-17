@@ -29,6 +29,8 @@
 
 - (IBAction)touchUpBtLogin:(id)sender {
     
+    //NSString *RememberMe = [[NSUserDefaults standardUserDefaults] stringForKey:@"RememberMe"];
+    
     self.Cst_Bt2Bt1.constant = 0;
     
     [self.BtLogin setTitle:@"Sign In" forState:UIControlStateNormal];
@@ -73,6 +75,9 @@
             
             
         }else{
+            
+            //[[NSUserDefaults standardUserDefaults] setValue:@"true" forKey:@"RememberMe"];
+            //[[NSUserDefaults standardUserDefaults] synchronize];
             
             //GL_MV_Customer.hadStripeID = true;
             UIStoryboard * storyboard = self.storyboard;

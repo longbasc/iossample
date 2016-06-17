@@ -7,6 +7,7 @@
 //
 
 #import "LeftMenuView.h"
+#import "LeftMenuCellView.h"
 
 @implementation LeftMenuView
 
@@ -54,16 +55,20 @@ NSMutableArray* _leftMenuArr;
 //==========================================================================
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"LeftMenuViewItem";
+    static NSString *CellIdentifier = @"LeftMenuCellView";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    LeftMenuCellView *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        //cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"LeftMenuCellView" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+        
     }
 
-     cell.textLabel.text = _leftMenuArr[indexPath.row];
+    // cell.textLabel.text = _leftMenuArr[indexPath.row];
+    cell.Lb_LeftMenuTitle.text =  _leftMenuArr[indexPath.row];
     return cell;
 }
 
