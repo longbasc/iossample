@@ -45,12 +45,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Forgot password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Mv-hz-t8B">
+                                <rect key="frame" x="112" y="229" width="139" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Xi0-Be-6rq" firstAttribute="top" secondItem="PHr-KJ-9we" secondAttribute="bottom" constant="8" id="3oN-b3-Jaw"/>
+                            <constraint firstItem="7Mv-hz-t8B" firstAttribute="top" secondItem="j34-xy-nGE" secondAttribute="bottom" constant="-6" id="8St-0n-Evc"/>
                             <constraint firstItem="j34-xy-nGE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EB9-MO-4CM"/>
                             <constraint firstItem="Xi0-Be-6rq" firstAttribute="centerX" secondItem="PHr-KJ-9we" secondAttribute="centerX" id="VmT-wn-eH1"/>
+                            <constraint firstItem="7Mv-hz-t8B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="21.5" id="d4v-Ei-zU3"/>
                             <constraint firstItem="PHr-KJ-9we" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="103" id="hid-N2-0aj"/>
                             <constraint firstItem="j34-xy-nGE" firstAttribute="top" secondItem="Xi0-Be-6rq" secondAttribute="bottom" constant="14" id="jMd-F3-HQP"/>
                             <constraint firstItem="PHr-KJ-9we" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q3a-TK-sOs"/>

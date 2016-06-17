@@ -40,7 +40,10 @@ NSMutableArray* _leftMenuArr;
 - (void) setDefaultValue{
     
     _leftMenuArr = [[NSMutableArray alloc] init];
-    [_leftMenuArr addObject:@"Menu 1"];
+    //[_leftMenuArr addObject:@"Menu 1"];
+    [_leftMenuArr addObject:NSLocalizedString(@"LeftMenu1", nil)];
+    
+    
     [_leftMenuArr addObject:@"Menu 2"];
     [_leftMenuArr addObject:@"Menu 3"];
     

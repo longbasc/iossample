@@ -1,0 +1,21 @@
+
+/* Class = "UIButton"; normalTitle = "Footer"; ObjectID = "1CI-s8-Yii"; */
+"1CI-s8-Yii.normalTitle" = "Footer";
+
+/* Class = "UIButton"; normalTitle = "Signout"; ObjectID = "2OB-h4-gnb"; */
+"2OB-h4-gnb.normalTitle" = "Signout";
+
+/* Class = "UILabel"; text = "Forgot password"; ObjectID = "7Mv-hz-t8B"; */
+"7Mv-hz-t8B.text" = "Quen Pass";
+
+/* Class = "UIButton"; normalTitle = "Header"; ObjectID = "Ehe-eq-Vxd"; */
+"Ehe-eq-Vxd.normalTitle" = "Header";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "j34-xy-nGE"; */
+"j34-xy-nGE.normalTitle" = "Login";
+
+/* Class = "UIButton"; normalTitle = "..."; ObjectID = "opC-hR-3Bp"; */
+"opC-hR-3Bp.normalTitle" = "...";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "phc-du-FLB"; */
+"phc-du-FLB.normalTitle" = "Back";

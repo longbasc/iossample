@@ -29,6 +29,7 @@
 		84CC7D181D13A45200793347 /* LeftMenuCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CC7D171D13A45200793347 /* LeftMenuCellView.xib */; };
 		84CC7D1B1D13A55D00793347 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CC7D1A1D13A55D00793347 /* calendar.png */; };
 		84CC7D1E1D13A5C300793347 /* LeftMenuCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CC7D1D1D13A5C300793347 /* LeftMenuCellView.m */; };
+		84CC7D291D13B61C00793347 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84CC7D2B1D13B61C00793347 /* Localizable.strings */; };
 		84F3C9B71D0FF62D00D576CE /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F3C9B61D0FF62D00D576CE /* ContainerViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,12 @@
 		84CC7D1A1D13A55D00793347 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calendar.png; path = assets/calendar.png; sourceTree = "<group>"; };
 		84CC7D1C1D13A5C300793347 /* LeftMenuCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftMenuCellView.h; path = ChildView/LeftMenu/LeftMenuCellView.h; sourceTree = "<group>"; };
 		84CC7D1D1D13A5C300793347 /* LeftMenuCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftMenuCellView.m; path = ChildView/LeftMenu/LeftMenuCellView.m; sourceTree = "<group>"; };
+		84CC7D221D13AEBD00793347 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		84CC7D271D13B5F600793347 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
+		84CC7D281D13B5F600793347 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		84CC7D2A1D13B61C00793347 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		84CC7D2C1D13B62500793347 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		84CC7D2D1D13B62700793347 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		84F3C9B51D0FF62D00D576CE /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
 		84F3C9B61D0FF62D00D576CE /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,6 +169,7 @@
 		849619841D0B6EDD007A0474 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				84CC7D2B1D13B61C00793347 /* Localizable.strings */,
 				849619851D0B6EDD007A0474 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -354,6 +362,7 @@
 			files = (
 				84C948781D1107AC006E5048 /* ChildView2.xib in Resources */,
 				849619BA1D0B7280007A0474 /* Common in Resources */,
+				84CC7D291D13B61C00793347 /* Localizable.strings in Resources */,
 				849619941D0B6EDD007A0474 /* LaunchScreen.storyboard in Resources */,
 				849619911D0B6EDD007A0474 /* Assets.xcassets in Resources */,
 				84C9487C1D110E42006E5048 /* LeftMenuView.xib in Resources */,
@@ -436,6 +445,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				8496198E1D0B6EDD007A0474 /* Base */,
+				84CC7D221D13AEBD00793347 /* en */,
+				84CC7D271D13B5F600793347 /* vi */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -444,8 +455,20 @@
 			isa = PBXVariantGroup;
 			children = (
 				849619931D0B6EDD007A0474 /* Base */,
+				84CC7D281D13B5F600793347 /* vi */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		84CC7D2B1D13B61C00793347 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84CC7D2A1D13B61C00793347 /* vi */,
+				84CC7D2C1D13B62500793347 /* Base */,
+				84CC7D2D1D13B62700793347 /* en */,
+			);
+			name = Localizable.strings;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
