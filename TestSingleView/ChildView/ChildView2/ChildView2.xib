@@ -14,6 +14,9 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zom-2w-GBn">
                     <rect key="frame" x="106" y="220" width="108" height="30"/>
                     <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="touchUpBtContent:" destination="iN0-l3-epB" eventType="touchUpInside" id="aFP-7H-XE9"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

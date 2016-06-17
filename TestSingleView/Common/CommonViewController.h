@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Globals.h"
+#import "CommonChildView.h"
 
-@interface CommonViewController : UIViewController <MyGlobalDelegate>
+@interface CommonViewController : UIViewController <MyGlobalDelegate,ChildViewDelegate>
 
 - (void)showWaitingIcon;
 - (void)hideWaitingIcon;

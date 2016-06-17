@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+
+@protocol ChildViewDelegate
+-(void)wantCloseChildView;
+@end
+
 @interface CommonChildView : UIView
 
 

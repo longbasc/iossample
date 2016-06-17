@@ -271,7 +271,11 @@ UIView* _animatedView = nil;
     
 }
 
-// talk about CustomTableViewCell, multilanguge, override TextInput 
+//============================
+-(void)wantCloseChildView{
+    [self popChildViewToIndex:-1];
+    
+}
 
 
 

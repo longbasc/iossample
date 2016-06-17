@@ -24,5 +24,12 @@
     
 }
 
+- (IBAction)touchUpBtContent:(id)sender {
+    
+    if ([self.delegate respondsToSelector:@selector(wantCloseChildView)]) {
+        [self.delegate wantCloseChildView];
+        
+    }
+}
 
 @end
