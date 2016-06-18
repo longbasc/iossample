@@ -38,6 +38,8 @@ CommonChildView*  _leftMenu = nil;
     [self.containerScrollView addGestureRecognizer:swipeLeft];
     [self.containerScrollView addGestureRecognizer:swipeRight];
     
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,6 +56,7 @@ CommonChildView*  _leftMenu = nil;
     // Pass the selected object to the new view controller.
 }
 */
+
 
 
 //==================================================================================================================

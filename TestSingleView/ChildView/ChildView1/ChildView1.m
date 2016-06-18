@@ -7,6 +7,7 @@
 //
 
 #import "ChildView1.h"
+#import "ContainerViewController.h"
 
 @implementation ChildView1
 
@@ -19,7 +20,34 @@
 */
 
 - (void) setDefaultValue{
+    [super setDefaultValue ];
+    
     self.Txt_Content.text = @"My View 1";
+     //self.Txt_Text1.keyboardType = UIKeyboardTypeNumberPad;
+     //[self.Txt_Text1 setAutocorrectionType:UITextAutocorrectionTypeNo];
+    
+
 }
+
+
+
+
+
+//================================================================================================
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    
+    
+    /*
+    if(textField != self.Txt_Text1)
+        return YES;
+    */
+    
+    return [super textField:textField shouldChangeCharactersInRange:range replacementString:string];
+     
+}
+
+
+
 
 @end

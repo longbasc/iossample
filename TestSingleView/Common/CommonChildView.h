@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@protocol ChildViewDelegate
+@protocol ChildViewDelegate <UITextFieldDelegate>
 -(void)wantCloseChildView;
 @end
 
@@ -18,7 +18,9 @@
 
 @property (assign,nonatomic) id delegate;
 - (void) setDefaultValue;
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string;
 
+@property (assign,nonatomic) UITextField* focusTextField;
 @end
 
 
