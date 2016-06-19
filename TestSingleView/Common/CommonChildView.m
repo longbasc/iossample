@@ -117,20 +117,20 @@ CGPoint _scrollOriginPoint;
     
     NSDictionary* info = [notification userInfo];
     CGSize keyboardSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-    _scrollOriginPoint = totalView.frame.origin;
     
+    _scrollOriginPoint = contentView.contentOffset;
     CGPoint txtFocusPoint = _focusTextField.frame.origin;
+    txtFocusPoint.y -= contentView.contentOffset.y;
     
-    //CGFloat txtCommentHeight = self.Txt_Comment.frame.size.height;
+    
     CGRect visibleRect = totalView.frame;
     visibleRect.size.height -= keyboardSize.height + 30;
     
-    if (!CGRectContainsPoint(visibleRect, txtFocusPoint)){
+    if (!CGRectContainsPoint(visibleRect, txtFocusPoint))
+    {
         
-        CGPoint scrollNewPoint = CGPointMake(0.0, keyboardSize.height - _scrollOriginPoint.y );
+        CGPoint scrollNewPoint = CGPointMake(_scrollOriginPoint.x, _scrollOriginPoint.y +  keyboardSize.height );
         [contentView setContentOffset:scrollNewPoint animated:YES];
-        //[self.view setContentOffset:scrollPoint animated:YES];
-        
     }
     
 }
@@ -141,11 +141,8 @@ CGPoint _scrollOriginPoint;
 - (void)keyboardWillBeHidden:(NSNotification *)notification {
     
     _keyBoardIsShown = false;
-    
     UIScrollView* contentView = ((ContainerViewController*)self.delegate).containerScrollView;
-    //CGPoint scrollNewPoint = CGPointMake(_scrollOriginPoint.x, _scrollOriginPoint.y  );
-    CGPoint scrollNewPoint = CGPointMake(0, 0  );
-    [contentView  setContentOffset:scrollNewPoint animated:YES];
+    [contentView  setContentOffset:_scrollOriginPoint animated:YES];
     
 }
 

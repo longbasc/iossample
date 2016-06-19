@@ -11,6 +11,9 @@
 #import "ChildView1.h"
 #import "ChildView2.h"
 
+#define MAX_PHONE_HEIGHT 736 //height of iPhone 6 plus
+
+
 @interface ContainerViewController ()
 
 @end
@@ -18,6 +21,7 @@
 @implementation ContainerViewController
 
 CommonChildView*  _leftMenu = nil;
+int _scrollPos = 0;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,18 +30,32 @@ CommonChildView*  _leftMenu = nil;
     
     
     [self.containerScrollView setUserInteractionEnabled:YES];
+    
     UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
     UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
+    
+    UISwipeGestureRecognizer *swipeUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
+    UISwipeGestureRecognizer *swipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
+    
+    
     
     
     // Setting the swipe direction.
     [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
     [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
     
+    [swipeUp setDirection:UISwipeGestureRecognizerDirectionUp];
+    [swipeDown setDirection:UISwipeGestureRecognizerDirectionDown];
+    
+    
     // Adding the swipe gesture on image view
     [self.containerScrollView addGestureRecognizer:swipeLeft];
     [self.containerScrollView addGestureRecognizer:swipeRight];
+    [self.containerScrollView addGestureRecognizer:swipeUp];
+    [self.containerScrollView addGestureRecognizer:swipeDown];
     
+    [self.containerScrollView setScrollEnabled:true];
+    [self.containerScrollView showsVerticalScrollIndicator];
     
     
 }
@@ -71,11 +89,42 @@ CommonChildView*  _leftMenu = nil;
        
     }
     
-    if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
+    else if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
         //NSLog(@"Right Swipe");
          [self showLeftMenu];
     }
+    else if (swipe.direction == UISwipeGestureRecognizerDirectionUp) {
+        
+        if(_scrollPos>= MAX_PHONE_HEIGHT) return;
+            
+        _scrollPos += 100;
+        
+        [UIScrollView beginAnimations:@"scrollAnimation" context:nil];
+        [UIScrollView setAnimationDuration:0.4f];
+        [self.containerScrollView setContentOffset:CGPointMake(0, _scrollPos)];
+        [UIScrollView commitAnimations];
+        
+        
+    }
+    else if (swipe.direction == UISwipeGestureRecognizerDirectionDown) {
+        
+        if(_scrollPos<=0){
+           _scrollPos = 0;
+         return;
+        }
+        
+        _scrollPos -= 100;
+        
+        [UIScrollView beginAnimations:@"scrollAnimation" context:nil];
+        [UIScrollView setAnimationDuration:0.1f];
+        [self.containerScrollView setContentOffset:CGPointMake(0, _scrollPos)];
+        [UIScrollView commitAnimations];
+        
+    }
+    
+    
 }
+
 
 
 //=======================================================
@@ -101,6 +150,7 @@ CommonChildView*  _leftMenu = nil;
 
 -(void) addChildViewWithNibName:(NSString*) nibName{
     
+    _scrollPos = 0;
     CommonChildView *av;
     
     if (av == nil)
@@ -119,12 +169,12 @@ CommonChildView*  _leftMenu = nil;
     [av setDefaultValue];
     //av.userInteractionEnabled = true;
     
-    [av setFrame:CGRectMake( self.containerScrollView.frame.size.width , 0, self.containerScrollView.frame.size.width  , self.containerScrollView.frame.size.height  )]; //notice this is OFF screen!
+    [av setFrame:CGRectMake( self.containerScrollView.frame.size.width , 0, self.containerScrollView.frame.size.width  ,  MAX_PHONE_HEIGHT )]; //notice this is OFF screen!
     
     [UIView beginAnimations:@"animateAddChildView" context:nil];
     [UIView setAnimationDuration:0.4];
     
-    [av setFrame:CGRectMake( 0 , 0, self.containerScrollView.frame.size.width  , self.containerScrollView.frame.size.height  )]; //notice this is OFF screen!
+    [av setFrame:CGRectMake( 0 , 0, self.containerScrollView.frame.size.width  ,  MAX_PHONE_HEIGHT )]; //notice this is OFF screen!
     //notice this is ON screen!
     
     
@@ -136,7 +186,7 @@ CommonChildView*  _leftMenu = nil;
 UIView* _animatedView = nil;
 -(bool) popChildViewToIndex: (int)index{
     
-    //self.containerScrollView
+    _scrollPos = 0;
     
     NSArray*  viewArr =  self.myContentViews;
     if(index==-1){
