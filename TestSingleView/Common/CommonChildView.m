@@ -13,6 +13,8 @@
 
 @implementation CommonChildView
 
+
+bool _keyBoardIsShown = false;
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -106,6 +108,8 @@
 CGPoint _scrollOriginPoint;
 - (void)keyboardWasShown:(NSNotification *)notification {
     
+    _keyBoardIsShown = true;
+    
     if(_focusTextField ==nil) return;
     
     UIView* totalView = ((ContainerViewController*)self.delegate).view;
@@ -136,6 +140,8 @@ CGPoint _scrollOriginPoint;
 //=============================================================================================
 - (void)keyboardWillBeHidden:(NSNotification *)notification {
     
+    _keyBoardIsShown = false;
+    
     UIScrollView* contentView = ((ContainerViewController*)self.delegate).containerScrollView;
     //CGPoint scrollNewPoint = CGPointMake(_scrollOriginPoint.x, _scrollOriginPoint.y  );
     CGPoint scrollNewPoint = CGPointMake(0, 0  );
@@ -147,6 +153,7 @@ CGPoint _scrollOriginPoint;
 //================================================================================================
 - (void) viewTapped {
     //[self.Txt_Text1 resignFirstResponder];
+    if(!_keyBoardIsShown) return;
     
     for(UIView * subView in self.subviews ) // here write Name of you ScrollView.
     {
