@@ -26,6 +26,8 @@
      //self.Txt_Text1.keyboardType = UIKeyboardTypeNumberPad;
      //[self.Txt_Text1 setAutocorrectionType:UITextAutocorrectionTypeNo];
     
+     [self.Ckb_Test init];
+    bool isCheck = self.Ckb_Test.isChecked;
 
 }
 

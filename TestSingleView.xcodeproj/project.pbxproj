@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		841998D01D1A1A7D003B4D6E /* Checkbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 841998CF1D1A1A7D003B4D6E /* Checkbox.m */; };
+		841998D31D1A20AE003B4D6E /* checkbox-off.png in Resources */ = {isa = PBXBuildFile; fileRef = 841998D11D1A20AE003B4D6E /* checkbox-off.png */; };
+		841998D41D1A20AE003B4D6E /* checkbox-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 841998D21D1A20AE003B4D6E /* checkbox-on.png */; };
 		849619861D0B6EDD007A0474 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 849619851D0B6EDD007A0474 /* main.m */; };
 		849619891D0B6EDD007A0474 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 849619881D0B6EDD007A0474 /* AppDelegate.m */; };
 		8496198C1D0B6EDD007A0474 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496198B1D0B6EDD007A0474 /* ViewController.m */; };
@@ -51,6 +54,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		841998CE1D1A1A7D003B4D6E /* Checkbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Checkbox.h; path = components/Checkbox.h; sourceTree = "<group>"; };
+		841998CF1D1A1A7D003B4D6E /* Checkbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Checkbox.m; path = components/Checkbox.m; sourceTree = "<group>"; };
+		841998D11D1A20AE003B4D6E /* checkbox-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "checkbox-off.png"; path = "components/checkbox-off.png"; sourceTree = "<group>"; };
+		841998D21D1A20AE003B4D6E /* checkbox-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "checkbox-on.png"; path = "components/checkbox-on.png"; sourceTree = "<group>"; };
 		849619811D0B6EDD007A0474 /* TestSingleView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestSingleView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849619851D0B6EDD007A0474 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		849619871D0B6EDD007A0474 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -123,6 +130,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		841998CD1D1A1A1B003B4D6E /* components */ = {
+			isa = PBXGroup;
+			children = (
+				841998D11D1A20AE003B4D6E /* checkbox-off.png */,
+				841998D21D1A20AE003B4D6E /* checkbox-on.png */,
+				841998CE1D1A1A7D003B4D6E /* Checkbox.h */,
+				841998CF1D1A1A7D003B4D6E /* Checkbox.m */,
+			);
+			name = components;
+			sourceTree = "<group>";
+		};
 		849619781D0B6EDD007A0474 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +164,7 @@
 		849619831D0B6EDD007A0474 /* TestSingleView */ = {
 			isa = PBXGroup;
 			children = (
+				841998CD1D1A1A1B003B4D6E /* components */,
 				84CC7D191D13A54B00793347 /* assets */,
 				84F3C9B81D0FF7FD00D576CE /* ChildView */,
 				849619C91D0B833F007A0474 /* Common */,
@@ -360,6 +379,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841998D41D1A20AE003B4D6E /* checkbox-on.png in Resources */,
 				84C948781D1107AC006E5048 /* ChildView2.xib in Resources */,
 				849619BA1D0B7280007A0474 /* Common in Resources */,
 				84CC7D291D13B61C00793347 /* Localizable.strings in Resources */,
@@ -370,6 +390,7 @@
 				8496198F1D0B6EDD007A0474 /* Main.storyboard in Resources */,
 				84CC7D1B1D13A55D00793347 /* calendar.png in Resources */,
 				84CC7D181D13A45200793347 /* LeftMenuCellView.xib in Resources */,
+				841998D31D1A20AE003B4D6E /* checkbox-off.png in Resources */,
 				849619B81D0B71DD007A0474 /* Framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +420,7 @@
 				8496198C1D0B6EDD007A0474 /* ViewController.m in Sources */,
 				849619C81D0B8134007A0474 /* CommonViewController.m in Sources */,
 				84F3C9B71D0FF62D00D576CE /* ContainerViewController.m in Sources */,
+				841998D01D1A1A7D003B4D6E /* Checkbox.m in Sources */,
 				84C9487F1D110EF6006E5048 /* LeftMenuView.m in Sources */,
 				849619891D0B6EDD007A0474 /* AppDelegate.m in Sources */,
 				849619CC1D0B83DF007A0474 /* Globals.m in Sources */,

@@ -17,8 +17,12 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BIz-r9-e0n">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BIz-r9-e0n">
                     <rect key="frame" x="8" y="8" width="97" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="EPp-6A-pNc"/>
+                        <constraint firstAttribute="width" constant="97" id="Euf-ps-oTC"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
@@ -27,17 +31,37 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1x-X8-HVu" customClass="Checkbox">
+                    <rect key="frame" x="8" y="46" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="VPU-Dr-Wc1"/>
+                        <constraint firstAttribute="width" constant="30" id="gGB-4j-L0i"/>
+                    </constraints>
+                    <state key="normal" title="cb" image="checkbox-off.png">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="BIz-r9-e0n" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="JGL-da-RLv"/>
+                <constraint firstItem="BIz-r9-e0n" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Ltc-Fo-ewd"/>
+                <constraint firstItem="h1x-X8-HVu" firstAttribute="leading" secondItem="BIz-r9-e0n" secondAttribute="leading" id="Pk0-yG-ew7"/>
+                <constraint firstItem="h1x-X8-HVu" firstAttribute="top" secondItem="BIz-r9-e0n" secondAttribute="bottom" constant="8" id="bkN-cg-ZoK"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="Ckb_Test" destination="h1x-X8-HVu" id="RhG-NP-PUW"/>
                 <outlet property="Txt_Content" destination="rSC-a8-eCo" id="iYx-BL-i0r"/>
                 <outlet property="Txt_Text1" destination="BIz-r9-e0n" id="S3C-iG-bdI"/>
                 <outlet property="Txt_Text2" destination="YNE-Qn-cG4" id="piB-5I-cCl"/>
             </connections>
         </view>
     </objects>
+    <resources>
+        <image name="checkbox-off.png" width="225" height="225"/>
+    </resources>
 </document>
