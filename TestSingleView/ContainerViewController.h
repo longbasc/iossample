@@ -15,6 +15,8 @@
 
 @property (strong, nonatomic) NSMutableArray* myContentViews;
 
+@property (weak, nonatomic) IBOutlet UIView *HeaderView;
 
+@property (weak, nonatomic) IBOutlet UIView *FooterView;
 
 @end

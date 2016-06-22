@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -38,8 +38,23 @@
                         <constraint firstAttribute="width" constant="30" id="gGB-4j-L0i"/>
                     </constraints>
                     <state key="normal" title="cb" image="checkbox-off.png">
-                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fP1-MA-v0p" customClass="Checkbox">
+                    <rect key="frame" x="8" y="84" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="3qh-t0-m7L"/>
+                        <constraint firstAttribute="width" constant="30" id="FtD-CX-ybX"/>
+                    </constraints>
+                    <state key="normal" title="Button" backgroundImage="checkbox-off.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COb-on-8An">
+                    <rect key="frame" x="8" y="122" width="46" height="30"/>
+                    <state key="normal" title="Alert"/>
+                    <connections>
+                        <action selector="showAlertView:" destination="iN0-l3-epB" eventType="touchUpInside" id="6Ej-tm-HrU"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -48,6 +63,10 @@
                 <constraint firstItem="BIz-r9-e0n" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Ltc-Fo-ewd"/>
                 <constraint firstItem="h1x-X8-HVu" firstAttribute="leading" secondItem="BIz-r9-e0n" secondAttribute="leading" id="Pk0-yG-ew7"/>
                 <constraint firstItem="h1x-X8-HVu" firstAttribute="top" secondItem="BIz-r9-e0n" secondAttribute="bottom" constant="8" id="bkN-cg-ZoK"/>
+                <constraint firstItem="fP1-MA-v0p" firstAttribute="leading" secondItem="h1x-X8-HVu" secondAttribute="leading" id="eUM-mI-nVH"/>
+                <constraint firstItem="COb-on-8An" firstAttribute="leading" secondItem="fP1-MA-v0p" secondAttribute="leading" id="iNt-wn-aO9"/>
+                <constraint firstItem="fP1-MA-v0p" firstAttribute="top" secondItem="h1x-X8-HVu" secondAttribute="bottom" constant="8" id="lig-3Y-q0B"/>
+                <constraint firstItem="COb-on-8An" firstAttribute="top" secondItem="fP1-MA-v0p" secondAttribute="bottom" constant="8" id="yV8-iS-5aA"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
@@ -55,6 +74,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="Ckb_Test" destination="h1x-X8-HVu" id="RhG-NP-PUW"/>
+                <outlet property="Ckb_Test2" destination="fP1-MA-v0p" id="Och-M8-fMT"/>
                 <outlet property="Txt_Content" destination="rSC-a8-eCo" id="iYx-BL-i0r"/>
                 <outlet property="Txt_Text1" destination="BIz-r9-e0n" id="S3C-iG-bdI"/>
                 <outlet property="Txt_Text2" destination="YNE-Qn-cG4" id="piB-5I-cCl"/>

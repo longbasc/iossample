@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *Txt_Text1;
 @property (weak, nonatomic) IBOutlet UITextField *Txt_Text2;
 @property (weak, nonatomic) IBOutlet Checkbox *Ckb_Test;
+@property (weak, nonatomic) IBOutlet Checkbox *Ckb_Test2;
 
 @end

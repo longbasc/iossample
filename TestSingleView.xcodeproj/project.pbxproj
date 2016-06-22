@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4204F3241D1A557600EC577E /* MyAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4204F3231D1A557600EC577E /* MyAlertView.xib */; settings = {ASSET_TAGS = (); }; };
+		4204F3271D1A55E400EC577E /* MyAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4204F3261D1A55E400EC577E /* MyAlertView.m */; settings = {ASSET_TAGS = (); }; };
 		841998D01D1A1A7D003B4D6E /* Checkbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 841998CF1D1A1A7D003B4D6E /* Checkbox.m */; };
 		841998D31D1A20AE003B4D6E /* checkbox-off.png in Resources */ = {isa = PBXBuildFile; fileRef = 841998D11D1A20AE003B4D6E /* checkbox-off.png */; };
 		841998D41D1A20AE003B4D6E /* checkbox-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 841998D21D1A20AE003B4D6E /* checkbox-on.png */; };
@@ -54,6 +56,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4204F3231D1A557600EC577E /* MyAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MyAlertView.xib; path = components/MyAlertView.xib; sourceTree = "<group>"; };
+		4204F3251D1A55E400EC577E /* MyAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyAlertView.h; path = components/MyAlertView.h; sourceTree = "<group>"; };
+		4204F3261D1A55E400EC577E /* MyAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyAlertView.m; path = components/MyAlertView.m; sourceTree = "<group>"; };
 		841998CE1D1A1A7D003B4D6E /* Checkbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Checkbox.h; path = components/Checkbox.h; sourceTree = "<group>"; };
 		841998CF1D1A1A7D003B4D6E /* Checkbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Checkbox.m; path = components/Checkbox.m; sourceTree = "<group>"; };
 		841998D11D1A20AE003B4D6E /* checkbox-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "checkbox-off.png"; path = "components/checkbox-off.png"; sourceTree = "<group>"; };
@@ -137,6 +142,9 @@
 				841998D21D1A20AE003B4D6E /* checkbox-on.png */,
 				841998CE1D1A1A7D003B4D6E /* Checkbox.h */,
 				841998CF1D1A1A7D003B4D6E /* Checkbox.m */,
+				4204F3231D1A557600EC577E /* MyAlertView.xib */,
+				4204F3251D1A55E400EC577E /* MyAlertView.h */,
+				4204F3261D1A55E400EC577E /* MyAlertView.m */,
 			);
 			name = components;
 			sourceTree = "<group>";
@@ -386,6 +394,7 @@
 				849619941D0B6EDD007A0474 /* LaunchScreen.storyboard in Resources */,
 				849619911D0B6EDD007A0474 /* Assets.xcassets in Resources */,
 				84C9487C1D110E42006E5048 /* LeftMenuView.xib in Resources */,
+				4204F3241D1A557600EC577E /* MyAlertView.xib in Resources */,
 				84C948731D110799006E5048 /* ChildView1.xib in Resources */,
 				8496198F1D0B6EDD007A0474 /* Main.storyboard in Resources */,
 				84CC7D1B1D13A55D00793347 /* calendar.png in Resources */,
@@ -427,6 +436,7 @@
 				849619861D0B6EDD007A0474 /* main.m in Sources */,
 				84C9486C1D1103EF006E5048 /* CommonChildView.m in Sources */,
 				84CC7D1E1D13A5C300793347 /* LeftMenuCellView.m in Sources */,
+				4204F3271D1A55E400EC577E /* MyAlertView.m in Sources */,
 				84C948721D110799006E5048 /* ChildView1.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

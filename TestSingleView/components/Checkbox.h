@@ -11,6 +11,7 @@
 @interface Checkbox : UIButton
 
 @property BOOL isChecked;
+- (void) setCheck:(BOOL)checked;
 
 
 @end
